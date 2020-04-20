@@ -1,0 +1,15 @@
+// this is basic style for "primary heading" in <header> element
+.primary-heading {
+  font-size: 3.8rem;
+  letter-spacing: 2.2rem;
+  animation: moveFromLeft 1.5s ease-in-out;
+  @include showcase-heading;
+}
+
+// this is basic style for "secondary heading" in <header> element
+.secondary-heading {
+  font-size: 1.2rem;
+  letter-spacing: 1.2rem;
+  animation: moveFromRight 1.5s ease-in-out;
+  @include showcase-heading;
+}

@@ -1,0 +1,40 @@
+// this is a animation for "primary heading" in <header> element
+@keyframes moveFromLeft {
+	0% {
+		opacity: 0;
+		transform: translateX(-15%);
+	}
+	80% {
+		transform: translateX(3%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+// this is an animation for "secondary heading" in <header> element
+@keyframes moveFromRight {
+	0% {
+		opacity: 0;
+		transform: translateX(15%);
+	}
+	80% {
+		transform: translateX(-3%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+// this is an animation for "btn-animated" in <header> element
+@keyframes moveFromBottom {
+	0% {
+		transform: translateY(30px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}

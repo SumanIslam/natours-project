@@ -1,0 +1,28 @@
+// this is basic styles for <header> element
+#header {
+	background: linear-gradient(rgba($primary-color-light, 0.808), rgba($primary-color-dark, 0.808)),
+		url(../img/hero.jpg) no-repeat top/cover;
+
+	height: 95vh;
+	position: relative;
+	clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+
+	.logo-container {
+		position: relative;
+		top: 40px;
+		left: 40px;
+
+		.logo {
+			height: 37px;
+		}
+	}
+
+	.showcase-text {
+		display: block;
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+}

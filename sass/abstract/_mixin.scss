@@ -1,0 +1,5 @@
+// this is a  showcase heading mixin
+@mixin showcase-heading {
+	text-transform: uppercase;
+	color: $color-white;
+}
