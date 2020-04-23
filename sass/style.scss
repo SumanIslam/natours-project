@@ -9,10 +9,11 @@
 
 @import "component/btn";
 
+@import "layout/grid";
 @import "layout/header";
 
+@import "pages/home";
+
 /* reusable components */
-a {
-	color: $color-gray-dark;
-	text-decoration: none;
-}
+
+

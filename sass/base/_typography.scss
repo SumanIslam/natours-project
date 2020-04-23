@@ -1,15 +1,44 @@
 // this is basic style for "primary heading" in <header> element
 .primary-heading {
-  font-size: 3.8rem;
-  letter-spacing: 2.2rem;
-  animation: moveFromLeft 1.5s ease-in-out;
-  @include showcase-heading;
+	font-size: 3.8rem;
+	letter-spacing: 2.2rem;
+	animation: moveFromLeft 1.5s ease-in-out;
+	@include showcase-heading;
 }
 
 // this is basic style for "secondary heading" in <header> element
 .secondary-heading {
-  font-size: 1.2rem;
-  letter-spacing: 1.2rem;
-  animation: moveFromRight 1.5s ease-in-out;
-  @include showcase-heading;
+	font-size: 1.2rem;
+	letter-spacing: 1.2rem;
+	animation: moveFromRight 1.5s ease-in-out;
+	@include showcase-heading;
+}
+
+// this is basic style for "heading animation" in "about section"
+.heading-animation {
+	font-size: 2.2rem;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: inline-block;
+	background-image: linear-gradient(to right, $primary-color-light, $primary-color-dark);
+	-webkit-background-clip: text;
+  color: transparent;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.3rem 0.6rem 1.3rem rgba($color-black, 0.2);
+  }
+}
+
+// this is style for "tertiary heading and lead" in "about section"
+
+.tertiary-heading {
+	font-size: $default-font-size;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.lead {
+	font-size: $default-font-size;
 }
