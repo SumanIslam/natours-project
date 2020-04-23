@@ -174,6 +174,10 @@ body {
   margin-bottom: 3rem;
 }
 
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
 .mb-2 {
   margin-bottom: 2rem;
 }
@@ -184,6 +188,10 @@ body {
 
 section {
   padding: 2rem;
+}
+
+img {
+  max-width: 100%;
 }
 
 .btn {
@@ -292,17 +300,71 @@ section {
   transition: all 0.5s;
 }
 
-.grid-1-of-2 {
+.composition {
+  position: relative;
+}
+
+.composition-photo {
+  width: 55%;
+  -webkit-box-shadow: 0 1rem 2.5rem rgba(17, 17, 17, 0.4);
+          box-shadow: 0 1rem 2.5rem rgba(17, 17, 17, 0.4);
+  border-radius: 0.1rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  outline-offset: 1rem;
+  position: absolute;
+}
+
+.composition-photo-p1 {
+  left: 0;
+  top: -1.5rem;
+}
+
+.composition-photo-p2 {
+  right: 0;
+  top: 1.5rem;
+}
+
+.composition-photo-p3 {
+  left: 5rem;
+  top: 6rem;
+}
+
+.composition-photo:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0 1.5rem 3rem rgba(17, 17, 17, 0.5);
+          box-shadow: 0 1.5rem 3rem rgba(17, 17, 17, 0.5);
+  z-index: 1000;
+  outline: 0.85rem solid #55c57a;
+}
+
+.composition:hover .composition-photo:not(:hover) {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.features-box {
+  padding: 1rem;
+  text-align: center;
+  background: #fff;
+}
+
+.grid {
   display: -ms-grid;
   display: grid;
+  grid-gap: 2rem;
+}
+
+.grid-1-of-2 {
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.grid-1-of-4 {
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  padding: 1rem;
 }
 
 #header {
@@ -334,11 +396,15 @@ section {
   text-align: center;
 }
 
-#about {
+.section-about {
   background-color: #f7f7f7;
   padding: 15rem 5rem;
   margin-top: -20vh;
 }
 
-/* reusable components */
+.section-features {
+  padding: 13rem 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(126, 213, 111, 0.808)), to(rgba(40, 180, 133, 0.808))), url(../img/nat-4.jpg) no-repeat top/cover;
+  background: linear-gradient(rgba(126, 213, 111, 0.808), rgba(40, 180, 133, 0.808)), url(../img/nat-4.jpg) no-repeat top/cover;
+}
 /*# sourceMappingURL=style.css.map */

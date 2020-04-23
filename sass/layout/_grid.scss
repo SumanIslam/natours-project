@@ -1,7 +1,13 @@
-// this is layout of 1 of two grid system
-.grid-1-of-2 {
+.grid {
   display: grid;
+  grid-gap: 2rem;;
+}
+// this is layout of 1 of 2 grid system
+.grid-1-of-2 {
   grid-template-columns: repeat(2,1fr);
-  justify-content: center;
-  align-items: center;
+}
+// this is layout of 1 of 4 grid system
+.grid-1-of-4 {
+  grid-template-columns: repeat(4,1fr);
+  padding: 1rem;
 }
