@@ -9,5 +9,6 @@
 // this is layout of 1 of 4 grid system
 .grid-1-of-4 {
   grid-template-columns: repeat(4,1fr);
-  padding: 1rem;
+  padding: 0 5rem;
+  grid-gap: 3.2rem;
 }

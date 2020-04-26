@@ -1,6 +1,5 @@
 .composition {
   position: relative;
-  // transition: all 0.2s;
 
   &-photo {
     width: 55%;
@@ -26,12 +25,13 @@
     &:hover {
       transform: scale(1.05);
       box-shadow: 0 1.5rem 3rem rgba($color-black, 0.5);
-      z-index: 1000;
+      z-index: 10;
       outline: 0.85rem solid $primary-color;
     }
   }
+  
   &:hover &-photo:not(:hover) {
     transform: scale(0.9);
   }
-  
+
 }

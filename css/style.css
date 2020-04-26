@@ -170,12 +170,12 @@ body {
   margin-bottom: 6rem;
 }
 
-.mb-3 {
-  margin-bottom: 3rem;
-}
-
 .mb-4 {
   margin-bottom: 4rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
 }
 
 .mb-2 {
@@ -264,7 +264,7 @@ img {
   padding: 0.3rem;
   background-color: #f7f7f7;
   border-bottom: 2px solid #55c57a;
-  color: #777;
+  color: #55c57a;
   text-decoration: none;
   position: relative;
   overflow: hidden;
@@ -335,7 +335,7 @@ img {
           transform: scale(1.05);
   -webkit-box-shadow: 0 1.5rem 3rem rgba(17, 17, 17, 0.5);
           box-shadow: 0 1.5rem 3rem rgba(17, 17, 17, 0.5);
-  z-index: 1000;
+  z-index: 10;
   outline: 0.85rem solid #55c57a;
 }
 
@@ -345,9 +345,27 @@ img {
 }
 
 .features-box {
-  padding: 1rem;
+  padding: 1.6rem;
   text-align: center;
-  background: #fff;
+  background-color: rgba(247, 247, 247, 0.85);
+  -webkit-box-shadow: 0 1rem 2.5rem rgba(17, 17, 17, 0.4);
+          box-shadow: 0 1rem 2.5rem rgba(17, 17, 17, 0.4);
+  border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.features-box-icon {
+  font-size: 3.8rem;
+  background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.features-box:hover {
+  -webkit-transform: translateY(-1rem) scale(1.03);
+          transform: translateY(-1rem) scale(1.03);
 }
 
 .grid {
@@ -364,7 +382,8 @@ img {
 .grid-1-of-4 {
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  padding: 1rem;
+  padding: 0 5rem;
+  grid-gap: 3.2rem;
 }
 
 #header {
@@ -398,13 +417,27 @@ img {
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 15rem 5rem;
+  padding: 13rem 5rem;
   margin-top: -20vh;
 }
 
 .section-features {
   padding: 13rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(126, 213, 111, 0.808)), to(rgba(40, 180, 133, 0.808))), url(../img/nat-4.jpg) no-repeat top/cover;
-  background: linear-gradient(rgba(126, 213, 111, 0.808), rgba(40, 180, 133, 0.808)), url(../img/nat-4.jpg) no-repeat top/cover;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/nat-4.jpg) no-repeat center/cover;
+  background: linear-gradient(rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg) no-repeat center/cover;
+  -webkit-transform: skewY(-7deg);
+          transform: skewY(-7deg);
+  margin-top: -5rem;
+}
+
+.section-features > * {
+  -webkit-transform: skewY(7deg);
+          transform: skewY(7deg);
+}
+
+.section-tours {
+  padding: 15rem 0;
+  background-color: #f7f7f7;
+  margin-top: -5rem;
 }
 /*# sourceMappingURL=style.css.map */

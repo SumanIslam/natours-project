@@ -1,10 +1,20 @@
 // this is the style for home page only
 .section-about {
   background-color: $color-gray-light;
-  padding: 15rem 5rem;
+  padding: 13rem 5rem;
   margin-top: -20vh;
 }
 .section-features {
   padding: 13rem 0;
-  background: linear-gradient(rgba($primary-color-light, 0.808), rgba($primary-color-dark, 0.808)), url(../img/nat-4.jpg) no-repeat top/cover;;
+  background: linear-gradient(rgba($primary-color-light, 0.8), rgba($primary-color-dark, 0.8)), url(../img/nat-4.jpg) no-repeat center/cover;
+  transform: skewY(-7deg);
+  margin-top: -5rem;
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+.section-tours {
+  padding: 15rem 0;
+  background-color: $color-gray-light;
+  margin-top: -5rem;
 }

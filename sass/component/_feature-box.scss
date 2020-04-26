@@ -1,5 +1,19 @@
 .features-box {
-  padding: 1rem;
+  padding: 1.6rem;
   text-align: center;
-  background: $color-white;
+  background-color: rgba($color-gray-light, 0.85);
+  box-shadow: 0 1rem 2.5rem rgba($color-black, 0.4);
+  border-radius: 2px;
+  transition: all 0.3s;
+  
+  &-icon {
+    font-size: 3.8rem;
+    background-image: linear-gradient(to right, $primary-color-light, $primary-color-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &:hover {
+    transform: translateY(-1rem) scale(1.03);
+  }
 }
