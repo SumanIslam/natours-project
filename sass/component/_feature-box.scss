@@ -8,9 +8,7 @@
   
   &-icon {
     font-size: 3.8rem;
-    background-image: linear-gradient(to right, $primary-color-light, $primary-color-dark);
-    -webkit-background-clip: text;
-    color: transparent;
+    @include section-main-heading
   }
 
   &:hover {

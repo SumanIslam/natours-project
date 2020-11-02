@@ -8,6 +8,7 @@
 	color: $color-gray-dark;
 	text-decoration: none;
 	position: relative;
+	transition: all 0.5s ease-in-out;
 	
 	// .btn:hover
 	&:hover {
@@ -38,7 +39,7 @@
 		height: 100%;
 		border-radius: 40px;
 		z-index: -1;
-		transition: all 0.5s;
+		transition: all 0.5s ease-in-out;
 	}
 
 	// .btn-animated

@@ -3,3 +3,8 @@
 	text-transform: uppercase;
 	color: $color-white;
 }
+@mixin  section-main-heading {
+	background: linear-gradient(to right, $primary-color-light, $primary-color-dark);
+	-webkit-background-clip: text;
+	color: transparent;
+}
