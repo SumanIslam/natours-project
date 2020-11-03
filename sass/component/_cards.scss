@@ -1,37 +1,133 @@
-.cards {
-  // -webkit-transform-style: preserve-3d;
-  //         transform-style: preserve-3d;
-  -webkit-perspective: 130rem;
-     -moz-perspective: 130rem;
-          perspective: 130rem;
-  backface-visibility: hidden;
-  position: relative;
+/* .card-wrapper is the container of 3d Effect */
 
-  &-side {
-    -webkit-transition: all 2s ease-in;
-            transition: all 2s ease-in;
-    height: 30rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+// Functionality
+.card-wrapper {
+  perspective: 500px;
 
-    &-front {
-      background-color: red;
-    }
-
-    &-back {
-      background-color: blue;
-      transform: rotateY(180deg);
-    }
-  }
-
-  &:hover &-side-front {
+  &:hover .card {
     transform: rotateY(-180deg);
   }
-  
-  &:hover &-side-back {
-    transform: rotateY(0);
+}
+
+/* 3d object */
+.card {
+  height: 30rem;
+  width: 100%;
+  border-radius: 7px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 2s ease;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+  &-front,
+  &-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    /*Hide another side of Card*/
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
   }
-  
+
+  &-front {
+    background-color: $color-white;
+  }
+
+  &-back {
+    transform: rotateY(180deg);
+    &-1 {
+      background-image: linear-gradient(to right bottom, $secondary-color-light, $secondary-color-dark);
+    }
+    &-2 {
+      background-image: linear-gradient(to right bottom, $primary-color-light, $primary-color-dark);
+    }
+    &-3 {
+      background-image: linear-gradient(to right bottom, $tertiary-color-light, $tertiary-color-dark);
+    }
+  }
+
+  // front-side styling...
+  &-photo {
+    background-size: cover;
+    height: 12rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &-1 {
+      background-image: linear-gradient(to right bottom, $secondary-color-light, $secondary-color-dark), url(../img/nat-5.jpg);
+    }
+    &-2 {
+      background-image: linear-gradient(to right bottom, $primary-color-light, $primary-color-dark),
+      url(../img/nat-6.jpg);
+    }
+    &-3 {
+      background-image: linear-gradient(to right bottom, $tertiary-color-light, $tertiary-color-dark),
+      url(../img/nat-7.jpg);
+      ;
+    }
+  }
+
+  // card-heading styling
+  &-heading {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: right;
+    color: $color-white;
+    position: absolute;
+    top: 5rem;
+    right: 1rem;
+    width: 70%;
+  }
+  &-heading-span {
+    padding: .5rem;
+    &-1 {
+      background-image: linear-gradient(to right bottom, rgba($secondary-color-light, 0.8), rgba($secondary-color-dark, 0.8));
+    }
+    &-2 {
+      background-image: linear-gradient(to right bottom, rgba($primary-color-light, 0.8), rgba($primary-color-dark, 0.8));
+    }
+    &-3 {
+      background-image: linear-gradient(to right bottom, rgba($tertiary-color-light, 0.8), rgba($tertiary-color-dark, 0.8));
+    }
+  }
+
+  &-details {
+    ul {
+      list-style: none;
+
+      li {
+        padding: 0.8rem;
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        &:not(:last-child) {
+          border-bottom: 2px solid $color-gray-light-2;
+        }
+      }
+    }
+  }
+
+  // Back side styling...
+  &-call-to-action {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  &-price-box {
+    text-transform: uppercase;
+    color: $color-white;
+    &-value {
+      font-size: 3.5rem;
+      font-weight: 300;
+    }
+  }
 }

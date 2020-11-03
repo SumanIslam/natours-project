@@ -4,7 +4,7 @@
   padding: 13rem 5rem;
   margin-top: -20vh;
 }
-.section-features {
+.features-section {
   padding: 13rem 0;
   background: linear-gradient(rgba($primary-color-light, 0.8), rgba($primary-color-dark, 0.8)), url(../img/nat-4.jpg) no-repeat center/cover;
   transform: skewY(-7deg);
@@ -13,7 +13,7 @@
     transform: skewY(7deg);
   }
 }
-.section-tours {
+.tours-section {
   padding: 15rem 0;
   background-color: $color-gray-light;
   margin-top: -5rem;

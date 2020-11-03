@@ -132,7 +132,7 @@ body {
   color: #fff;
 }
 
-.about-heading {
+.main-heading {
   font-size: 2.2rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
@@ -301,42 +301,160 @@ img {
   transition: all 0.5s;
 }
 
-.cards {
-  -webkit-perspective: 130rem;
-  perspective: 130rem;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  position: relative;
+/* .card-wrapper is the container of 3d Effect */
+.card-wrapper {
+  -webkit-perspective: 500px;
+          perspective: 500px;
 }
 
-.cards-side {
-  -webkit-transition: all 2s ease-in;
-  transition: all 2s ease-in;
-  height: 30rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-.cards-side-front {
-  background-color: red;
-}
-
-.cards-side-back {
-  background-color: blue;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-.cards:hover .cards-side-front {
+.card-wrapper:hover .card {
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
 }
 
-.cards:hover .cards-side-back {
-  -webkit-transform: rotateY(0);
-          transform: rotateY(0);
+/* 3d object */
+.card {
+  height: 30rem;
+  width: 100%;
+  border-radius: 7px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(17, 17, 17, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(17, 17, 17, 0.15);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /*Hide another side of Card*/
+}
+
+.card-front {
+  background-color: #fff;
+}
+
+.card-back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card-back-1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730));
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+
+.card-back-2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485));
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+
+.card-back-3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa));
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+}
+
+.card-photo {
+  background-size: cover;
+  height: 12rem;
+  background-blend-mode: screen;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.card-photo-1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730)), url(../img/nat-5.jpg);
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg);
+}
+
+.card-photo-2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485)), url(../img/nat-6.jpg);
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg);
+}
+
+.card-photo-3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa)), url(../img/nat-7.jpg);
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg);
+}
+
+.card-heading {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: right;
+  color: #fff;
+  position: absolute;
+  top: 5rem;
+  right: 1rem;
+  width: 70%;
+}
+
+.card-heading-span {
+  padding: .5rem;
+}
+
+.card-heading-span-1 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 185, 0, 0.8)), to(rgba(255, 119, 48, 0.8)));
+  background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8));
+}
+
+.card-heading-span-2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8)));
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+}
+
+.card-heading-span-3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41, 152, 255, 0.8)), to(rgba(86, 67, 250, 0.8)));
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8));
+}
+
+.card-details ul {
+  list-style: none;
+}
+
+.card-details ul li {
+  padding: 0.8rem;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+.card-details ul li:not(:last-child) {
+  border-bottom: 2px solid #eee;
+}
+
+.card-call-to-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.card-price-box {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.card-price-box-value {
+  font-size: 3.5rem;
+  font-weight: 300;
 }
 
 .composition {
@@ -391,8 +509,8 @@ img {
 
 .features-box-icon {
   font-size: 3.8rem;
-  background: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
-  background: linear-gradient(to right, #7ed56f, #28b485);
+  background-image: -webkit-gradient(linear, left top, right top, from(#7ed56f), to(#28b485));
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -461,7 +579,7 @@ img {
   margin-top: -20vh;
 }
 
-.section-features {
+.features-section {
   padding: 13rem 0;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8))), url(../img/nat-4.jpg) no-repeat center/cover;
   background: linear-gradient(rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg) no-repeat center/cover;
@@ -470,12 +588,12 @@ img {
   margin-top: -5rem;
 }
 
-.section-features > * {
+.features-section > * {
   -webkit-transform: skewY(7deg);
           transform: skewY(7deg);
 }
 
-.section-tours {
+.tours-section {
   padding: 15rem 0;
   background-color: #f7f7f7;
   margin-top: -5rem;
