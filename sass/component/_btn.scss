@@ -44,8 +44,10 @@
 
 	// .btn-animated
 	&-animated {
-		animation: moveFromBottom 0.5s ease-out 0.75s;
-		animation-fill-mode: backwards;
+		-webkit-animation: moveFromBottom 0.5s ease-out 0.75s;
+		        animation: moveFromBottom 0.5s ease-out 0.75s;
+		-webkit-animation-fill-mode: backwards;
+		        animation-fill-mode: backwards;
 	}
 
 	// .btn-white
@@ -62,6 +64,14 @@
 		}
 	}
 	// .btn-green
+	&-green {
+		background-color: $primary-color;
+		color: $color-white;
+
+		&:after {
+			background-color: $primary-color;
+		}
+	}
 	
 }
 

@@ -1,0 +1,157 @@
+// media query for typography
+@media (max-width: 930px) {
+  .main-heading {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 576) {
+  .main-heading {
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+// media query for header section starts
+@media (max-width: 960px) {
+  body {
+    padding: 0;
+  }
+  #header {
+    .logo-container {
+      top: 30px;
+      left: 30px;
+
+      .logo {
+        height: 30px;
+      }
+    }
+  }
+
+  .showcase-heading-primary {
+    font-size: 3rem;
+    letter-spacing: 1.8rem;
+    font-weight: 700;
+  }
+
+  .showcase-heading-secondary {
+    font-size: 1rem;
+    letter-spacing: 0.8rem;
+    font-weight: 700;
+  }
+
+  .btn {
+      padding: 0.8rem 2rem;
+      font-size: 0.8rem;
+  }
+  
+}
+
+@media (max-width: 576px) {
+  #header {
+    clip-path:polygon(0 0, 100% 0, 100% 85vh, 0 100%)
+  }
+  .showcase-heading-primary {
+    font-size: 2.7rem;
+    font-weight: 600;
+    letter-spacing: 1rem;
+  }
+
+  .showcase-heading-secondary {
+    letter-spacing: 0.3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .showcase-heading-primary {
+    font-size: 2.3rem;
+    letter-spacing: 0.8rem;
+  }
+
+  .showcase-heading-secondary {
+    font-size: 0.9rem;
+    letter-spacing: 0.3rem;
+  }
+}
+
+// media Query for header section ends
+
+// media query for about section starts
+@media (max-width: 991px) {
+  .about-section {
+    padding: 13rem 5rem 20rem 5rem;
+  }
+}
+@media (max-width: 768px) {
+  .about-sub-heading {
+    font-size: 0.8rem;
+  }
+
+  .lead {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 600px) {
+  .about-section {
+    padding: 10rem 2rem 15rem 2rem;
+  }
+  .about-sub-heading {
+    font-size: 0.75rem;
+  }
+  .lead {
+    font-size: 0.85rem;
+  }
+
+  .composition {
+
+    &-photo {
+
+      &-p1 {
+        left: 0;
+        top: -1.5rem;
+      }
+
+      &-p2 {
+        right: 0;
+        top: 0.5rem;
+      }
+
+      &-p3 {
+        left: 3.5rem;
+        top: 4rem;
+      }
+    }
+
+  }
+}
+@media (max-width: 450px) {
+  .about-section {
+    padding: 10rem 2rem 12rem 2rem;
+  }
+}
+
+// media query for about section ends
+
+// media query for feature section starts
+@media (max-width: 768px) {
+  .features-section {
+    padding: 10rem 0;
+  }
+}
+@media (max-width: 550px) {
+  .features-section {
+    padding: 7rem 0;
+  }
+}
+// media query for feature section ends
+
+// media query for cards section starts
+@media (max-width: 768px) {
+  .card {
+    width: 70%;
+    margin: auto;
+  }
+}

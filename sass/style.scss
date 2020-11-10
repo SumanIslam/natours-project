@@ -1,19 +1,28 @@
+// from abstract folder
 @import "abstract/functions";
 @import "abstract/mixin";
 @import "abstract/variables";
 
+// from base folder
 @import "base/animation";
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
 
+// from component folder
 @import "component/btn";
 @import "component/cards";
 @import "component/compositions";
 @import "component/feature-box";
+@import "component/story";
 
+// from layout folder
 @import "layout/grid";
 @import "layout/header";
 
+// from pages folder
 @import "pages/home";
+
+// media Query
+@import "layout/media";
 

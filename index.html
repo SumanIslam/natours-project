@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
   <!-- css link -->
   <link rel="stylesheet" href="css/style.css">
   <!-- google font -->
@@ -16,7 +18,7 @@
 </head>
 
 <body>
-  <!-- header Starts -->
+  <!-- header section Starts -->
   <header id="header">
     <div class="logo-container">
       <img src="img/logo-white.png" alt="logo image" class="logo">
@@ -28,17 +30,17 @@
     </div>
   </header>
 
-  <!-- main Starts -->
+  <!-- main section Starts -->
   <main>
 
     <!-- about section starts -->
     <section class="about-section">
-      <div class="text-center mb-5">
+      <div class="text-center mb-3 mb-md-5">
         <h1 class="main-heading">exciting tours for adventurous people</h1>
       </div>
-      <div class="grid grid-1-of-2">
+      <div class="row">
         <!-- about content -->
-        <div class="about-content">
+        <div class="about-content col-12 col-lg-6 mb-5">
           <div>
             <h1 class="about-sub-heading mb-1">you're going to fall in love with nature</h1>
             <p class="lead mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente
@@ -53,7 +55,7 @@
           </div>
         </div>
         <!-- about image composition -->
-        <div class="composition">
+        <div class="composition col-10 col-lg-6 mb-8 mx-auto">
           <img src="img/nat-1-large.jpg" alt="photo 1" class="composition-photo composition-photo-p1">
           <img src="img/nat-2-large.jpg" alt="photo 2" class="composition-photo composition-photo-p2">
           <img src="img/nat-3-large.jpg" alt="photo 3" class="composition-photo composition-photo-p3">
@@ -64,34 +66,61 @@
 
     <!-- feature section -->
     <section class="features-section">
-      <div class="grid grid-1-of-4">
+      <div class="container">
 
-        <div class="features-box">
-          <i class="features-box-icon icon-basic-world"></i>
-          <h1 class="tertiary-heading mb-1">explore the world</h1>
-          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-          </p>
-        </div>
+        <div class="row">
 
-        <div class="features-box">
-          <i class="features-box-icon icon-basic-compass"></i>
-          <h1 class="tertiary-heading mb-1">meet nature</h1>
-          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-          </p>
-        </div>
+          <div class="features-box col-lg-3 col-md-6 col-12 text-center mb-3 mb-sm-4 mb-lg-0">
+            <div class="card border-0" style="height: 100%;">
+              <div class="card-body">
+                <i class="features-box-icon icon-basic-world"></i>
+                <h1 class="tertiary-heading mb-1">explore the world</h1>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente
+                  aspernatur.
+                </p>
+              </div>
+            </div>
 
-        <div class="features-box">
-          <i class="features-box-icon icon-basic-map"></i>
-          <h1 class="tertiary-heading mb-1">find your way</h1>
-          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-          </p>
-        </div>
+          </div>
 
-        <div class="features-box">
-          <i class="features-box-icon icon-basic-heart"></i>
-          <h1 class="tertiary-heading mb-1">live a healthier life</h1>
-          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur.
-          </p>
+          <div class="features-box col-lg-3 col-md-6 col-12 text-center mb-3 mb-sm-4 mb-lg-0">
+            <div class="card border-0" style="height: 100%;">
+              <div class="card-body">
+                <i class="features-box-icon icon-basic-compass"></i>
+                <h1 class="tertiary-heading mb-1">meet nature</h1>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente
+                  aspernatur.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="features-box col-lg-3 col-md-6 col-12 text-center mb-3 mb-sm-4 mb-lg-0">
+            <div class="card border-0" style="height: 100%;">
+              <div class="card-body">
+                <i class="features-box-icon icon-basic-map"></i>
+                <h1 class="tertiary-heading mb-1">find your way</h1>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente
+                  aspernatur.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="features-box col-lg-3 col-md-6 col-12 text-center mb-3 mb-sm-4 mb-lg-0">
+            <div class="card border-0" style="height: 100%;">
+              <div class="card-body">
+                <i class="features-box-icon icon-basic-heart"></i>
+                <h1 class="tertiary-heading mb-1">live a healthier life</h1>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente
+                  aspernatur.
+                </p>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
@@ -102,111 +131,144 @@
       <div class="text-center mb-5">
         <h1 class="main-heading">most popular tours</h1>
       </div>
+      <div class="container">
+        <div class="row">
+            <!-- first card -->
+          <div class="col-12 col-lg-4 col-md-6 mb-5 mb-lg-0">
+            <div class="card-wrapper">
+              <div class="card border-0">
+                <!-- card front -->
+                <div class="card-front">
+                  <div class="card-photo card-photo-1"></div>
 
-      <div class="grid grid-1-of-3">
-        <!-- first card -->
-        <div class="card-wrapper">
-            <div class="card">
-              <!-- card front -->
-              <div class="card-front">
-                <div class="card-photo card-photo-1"></div>
-
-                <div class="card-heading">
-                  <span class="card-heading-span card-heading-span-1">the sea explorer</span>
-                </div>
-
-                <div class="card-details">
-                  <ul>
-                    <li>3 days tour</li>
-                    <li>Up to 30 people</li>
-                    <li>2 tour guides</li>
-                    <li>sleep in cozy hostels</li>
-                    <li>Difficulty: Very Easy</li>
-                  </ul>
-                </div>
-              </div>
-              <!-- card back -->
-              <div class="card-back card-back-1">
-                <div class="card-call-to-action">
-                  <div class="card-price-box">
-                    <p class="card-price-box-only">Only</p>
-                    <p class="card-price-box-value">$297</p>
+                  <div class="card-heading">
+                    <span class="card-heading-span card-heading-span-1">the sea explorer</span>
                   </div>
-                  <a href="#" class="btn btn-white">book now</a>
+
+                  <div class="card-details">
+                    <ul>
+                      <li>3 days tour</li>
+                      <li>Up to 30 people</li>
+                      <li>2 tour guides</li>
+                      <li>sleep in cozy hostels</li>
+                      <li>Difficulty: Very Easy</li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- card back -->
+                <div class="card-back card-back-1">
+                  <div class="card-call-to-action">
+                    <div class="card-price-box">
+                      <p class="card-price-box-only">Only</p>
+                      <p class="card-price-box-value">$297</p>
+                    </div>
+                    <a href="#" class="btn btn-white">book now</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        <!-- second card -->
-        <div class="card-wrapper">
-            <div class="card">
-              <div class="card-front">
-                
-                <div class="card-photo card-photo-2"></div>
-                
-                <div class="card-heading">
-                  <span class="card-heading-span card-heading-span-2">the forest hiker</span>
-                </div>
+          <!-- second card -->
+          <div class="col-12 col-lg-4 col-md-6 mb-5 mb-lg-0">
+            <div class="card-wrapper">
+              <div class="card border-0">
+                <div class="card-front">
 
-                <div class="card-details">
-                  <ul>
-                    <li>7 days tour</li>
-                    <li>Up to 40 people</li>
-                    <li>6 tour guides</li>
-                    <li>sleep in provided tents</li>
-                    <li>Difficulty: Medium</li>
-                  </ul>
-                </div>
-              </div>
-              <!-- card back -->
-              <div class="card-back card-back-2">
-                <div class="card-call-to-action">
-                  <div class="card-price-box">
-                    <p class="card-price-box-only">Only</p>
-                    <p class="card-price-box-value">$497</p>
+                  <div class="card-photo card-photo-2"></div>
+
+                  <div class="card-heading">
+                    <span class="card-heading-span card-heading-span-2">the forest hiker</span>
                   </div>
-                  <a href="#" class="btn btn-white">book now</a>
+
+                  <div class="card-details">
+                    <ul>
+                      <li>7 days tour</li>
+                      <li>Up to 40 people</li>
+                      <li>6 tour guides</li>
+                      <li>sleep in provided tents</li>
+                      <li>Difficulty: Medium</li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- card back -->
+                <div class="card-back card-back-2">
+                  <div class="card-call-to-action">
+                    <div class="card-price-box">
+                      <p class="card-price-box-only">Only</p>
+                      <p class="card-price-box-value">$497</p>
+                    </div>
+                    <a href="#" class="btn btn-white">book now</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        <!-- third card -->
-        <div class="card-wrapper">
-            <div class="card">
-              <!-- card front -->
-              <div class="card-front">
-                
-                <div class="card-photo card-photo-3"></div>
-                
-                <div class="card-heading">
-                  <span class="card-heading-span card-heading-span-3">the sea explorer</span>
-                </div>
+          <!-- third card -->
+          <div class="col-12 col-lg-4 col-md-6 mb-5 mb-lg-0">
+            <div class="card-wrapper">
+              <div class="card border-0">
+                <!-- card front -->
+                <div class="card-front">
 
-                <div class="card-details">
-                  <ul>
-                    <li>5 days tour</li>
-                    <li>Up to 15 people</li>
-                    <li>3 tour guides</li>
-                    <li>sleep in provided tents</li>
-                    <li>Difficulty: Hard</li>
-                  </ul>
-                </div>
-              </div>
-              <!-- card back -->
-              <div class="card-back card-back-3">
-                <div class="card-call-to-action">
-                  <div class="card-price-box">
-                    <p class="card-price-box-only">Only</p>
-                    <p class="card-price-box-value">$697</p>
+                  <div class="card-photo card-photo-3"></div>
+
+                  <div class="card-heading">
+                    <span class="card-heading-span card-heading-span-3">the sea explorer</span>
                   </div>
-                  <a href="#" class="btn btn-white">book now</a>
+
+                  <div class="card-details">
+                    <ul>
+                      <li>5 days tour</li>
+                      <li>Up to 15 people</li>
+                      <li>3 tour guides</li>
+                      <li>sleep in provided tents</li>
+                      <li>Difficulty: Hard</li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- card back -->
+                <div class="card-back card-back-3">
+                  <div class="card-call-to-action">
+                    <div class="card-price-box">
+                      <p class="card-price-box-only">Only</p>
+                      <p class="card-price-box-value">$697</p>
+                    </div>
+                    <a href="#" class="btn btn-white">book now</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      </div>
+
+
+
+      <!-- green btn -->
+      <div class="text-center mt-8">
+        <a href="#" class="btn btn-green btn-animated">discover all tours</a>
+      </div>
+    </section>
+
+    <!-- section stories -->
+    <section class="stories-section">
+      <div class="text-center mb-5">
+        <h1 class="main-heading">we make people genuinely happy</h1>
+      </div>
+
+      <div class="row">
+        <div class="story">
+          sf
+        </div>
+      </div>
     </section>
   </main>
+
+  <!-- dependencies -->
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 
 </html>

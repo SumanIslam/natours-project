@@ -1,0 +1,24 @@
+{
+  "name": "natours-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SumanIslam/natours-project.git"
+  },
+  "author": "Suman Islam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SumanIslam/natours-project/issues"
+  },
+  "homepage": "https://github.com/SumanIslam/natours-project#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.5.4",
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1"
+  }
+}

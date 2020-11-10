@@ -5,7 +5,8 @@
 
 	height: 95vh;
 	position: relative;
-	clip-path: $polygon-header;
+	-webkit-clip-path: $polygon-header;
+	        clip-path: $polygon-header;
 
 	.logo-container {
 		position: relative;
