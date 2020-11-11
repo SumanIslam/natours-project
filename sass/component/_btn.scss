@@ -67,9 +67,10 @@
 	&-green {
 		background-color: $primary-color;
 		color: $color-white;
-
+		
 		&:after {
 			background-color: $primary-color;
+			color: $color-white;
 		}
 	}
 	
@@ -79,8 +80,7 @@
 .btn-text {
 	font-size: $default-font-size;
 	display: inline-block;
-	padding: 0.3rem;
-	background-color: $color-gray-light;
+	padding: 0.5rem 0.8rem;
 	border-bottom: 2px solid $primary-color;
 	color: $primary-color;
 	text-decoration: none;
@@ -91,6 +91,7 @@
 
 	&:hover {
 		color: $color-white;
+		text-decoration: none;
 
 		&:after {
 			transform: translateY(0);

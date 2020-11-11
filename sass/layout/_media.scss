@@ -149,9 +149,54 @@
 // media query for feature section ends
 
 // media query for cards section starts
-@media (max-width: 768px) {
+@media (max-width: 450px) {
+  .card {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
   .card {
     width: 70%;
     margin: auto;
+  }
+}
+
+// media query for cards section ends
+
+//media query for story section starts
+@media (max-width: 880px) {
+  .story {
+    width: 80%;
+  }
+  .story-text {
+    h3 {
+      font-size: 90%;
+    }
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .story {
+    width: 85%;
+    transform: skewX(0);
+    padding: 3rem 1.5rem;
+
+    & > * {
+      transform: skewX(0);
+    }
+
+    &-shape {
+      margin-right: 1.5rem;
+    }
+  }
+  .story-text {
+    h3 {
+      font-size: 75%;
+    }
+    p {
+      font-size: 0.7rem;
+    }
   }
 }
