@@ -185,6 +185,26 @@ body {
   margin-top: 8rem;
 }
 
+.px-6 {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+.py-6 {
+  padding-bottom: 6rem;
+  padding-top: 6rem;
+}
+
+.py-7 {
+  padding-bottom: 7rem;
+  padding-top: 7rem;
+}
+
+.py-8 {
+  padding-bottom: 8rem;
+  padding-top: 8rem;
+}
+
 section {
   padding: 2rem;
 }
@@ -225,6 +245,11 @@ img {
           box-shadow: 0 5px 10px rgba(17, 17, 17, 0.3);
 }
 
+.btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .btn:after {
   content: '';
   position: absolute;
@@ -262,6 +287,7 @@ img {
 .btn-green {
   background-color: #55c57a;
   color: #fff;
+  padding: 0.85rem 2.3rem;
 }
 
 .btn-green:after {
@@ -615,6 +641,116 @@ img {
   filter: blur(3px) brightness(80%);
 }
 
+.booking-bg-image {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.contact-form {
+  padding: 4rem 2rem 2rem;
+}
+
+.input {
+  background: transparent;
+  border: transparent;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+}
+
+.input:focus {
+  background: transparent;
+  border: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #111;
+  border-bottom: 2px solid #55c57a;
+}
+
+.label {
+  color: #777;
+  display: block;
+  margin-top: -60px;
+  margin-left: 4px;
+  font-size: 0.8rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.input:placeholder-shown + .label {
+  -webkit-transform: translate(20px, 20px);
+          transform: translate(20px, 20px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.radio-input {
+  display: none;
+}
+
+.radio-label {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.radio-button {
+  height: 2rem;
+  width: 2rem;
+  border: 5px solid #55c57a;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.radio-button::after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  border-radius: 50%;
+  background-color: #55c57a;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.radio-input:checked + .radio-label .radio-button::after {
+  opacity: 1;
+}
+
+.footer-section {
+  background: #333;
+}
+
+.footer-link {
+  color: #f7f7f7;
+  font-size: 0.95rem;
+  padding: 0.4rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.footer-link:hover {
+  background: #333;
+  color: #55c57a;
+  text-decoration: none;
+  -webkit-box-shadow: 0 1rem 2rem rgba(17, 17, 17, 0.4);
+          box-shadow: 0 1rem 2rem rgba(17, 17, 17, 0.4);
+}
+
+.borderTop {
+  border-top: 1px solid #777;
+  width: 90%;
+}
+
 .grid {
   display: -ms-grid;
   display: grid;
@@ -697,6 +833,25 @@ img {
 .stories-section {
   position: relative;
   padding: 5rem 0;
+}
+
+.booking-section {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(126, 213, 111, 0.8)), to(rgba(40, 180, 133, 0.8)));
+  background: linear-gradient(rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+}
+
+@media (max-width: 992px) {
+  .px-lg-6 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .px-md-6 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 }
 
 @media (max-width: 930px) {
@@ -828,16 +983,16 @@ img {
   }
 }
 
-@media (max-width: 450px) {
-  .card {
-    width: 100%;
-  }
-}
-
 @media (max-width: 767px) {
   .card {
     width: 70%;
     margin: auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .card {
+    width: 100%;
   }
 }
 
@@ -872,6 +1027,57 @@ img {
   }
   .story-text p {
     font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .booking-bg-image {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.9))), url(../img/nat-10.jpg) no-repeat center center/cover;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url(../img/nat-10.jpg) no-repeat center center/cover;
+  }
+  .contact-form {
+    width: 75%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-form {
+    width: 70%;
+    margin: 2rem;
+    padding: 4rem 0 2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .contact-form {
+    width: 85%;
+    margin: 0;
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-link {
+    font-size: 0.75rem;
+    padding: 0.3rem;
+  }
+  .borderTop {
+    width: 100%;
+  }
+}
+
+@media (max-width: 510px) {
+  .footer-link {
+    font-size: 0.60rem;
+    padding: 0.2rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .footer-link {
+    font-size: 0.55rem;
+    padding: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

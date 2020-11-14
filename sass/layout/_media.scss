@@ -1,3 +1,16 @@
+// media for utilities
+@media (max-width: 992px) {
+  .px-lg-6 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+@media (max-width: 768px) {
+  .px-md-6 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
 // media query for typography
 @media (max-width: 930px) {
   .main-heading {
@@ -15,6 +28,7 @@
     text-align: left;
   }
 }
+
 // media query for header section starts
 @media (max-width: 960px) {
   body {
@@ -77,8 +91,6 @@
   }
 }
 
-// media Query for header section ends
-
 // media query for about section starts
 @media (max-width: 991px) {
   .about-section {
@@ -133,8 +145,6 @@
   }
 }
 
-// media query for about section ends
-
 // media query for feature section starts
 @media (max-width: 768px) {
   .features-section {
@@ -146,14 +156,8 @@
     padding: 7rem 0;
   }
 }
-// media query for feature section ends
 
 // media query for cards section starts
-@media (max-width: 450px) {
-  .card {
-    width: 100%;
-  }
-}
 @media (max-width: 767px) {
   .card {
     width: 70%;
@@ -161,7 +165,11 @@
   }
 }
 
-// media query for cards section ends
+@media (max-width: 450px) {
+  .card {
+    width: 100%;
+  }
+}
 
 //media query for story section starts
 @media (max-width: 880px) {
@@ -198,5 +206,57 @@
     p {
       font-size: 0.7rem;
     }
+  }
+}
+
+// media for booking section 
+
+@media (max-width: 992px) {
+  .booking-bg-image {
+    background: linear-gradient(rgba($color-white, 0.9), rgba($color-white, 0.9)),
+    url(../img/nat-10.jpg) no-repeat center center/cover;
+  }
+  .contact-form {
+    width: 75%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-form {
+    width: 70%;
+    margin: 2rem;
+    padding: 4rem 0 2rem;
+  }
+}
+@media (max-width: 550px) {
+  .contact-form {
+    width: 85%;
+    margin: 0;
+    margin-left: 2rem;
+  }
+}
+
+//media query for footer
+@media (max-width: 768px) {
+  .footer-link {
+    font-size: 0.75rem;
+    padding:0.3rem;
+  }
+  .borderTop {
+    width: 100%;
+  }
+}
+
+@media (max-width: 510px) {
+  .footer-link {
+    font-size: 0.60rem;
+    padding: 0.2rem;
+  }
+}
+@media (max-width: 420px) {
+  .footer-link {
+    font-size: 0.55rem;
+    padding: 0;
   }
 }
